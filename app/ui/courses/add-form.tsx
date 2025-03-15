@@ -137,7 +137,7 @@ export default function Form({ users }: { users: user[] }) {
             id="teacherId"
             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
           >
-            <option value="">Select a teacher</option>
+            <option value="">Professeurs</option>
             {users.map((user) => (
               <option key={user.id} value={user.id}>
                 {user.name}
@@ -178,7 +178,7 @@ export default function Form({ users }: { users: user[] }) {
             htmlFor="schedule"
             className="block text-sm font-medium text-gray-700"
           >
-            Schedule
+            Heure
           </label>
           <input
             {...register("schedule", {
@@ -201,7 +201,7 @@ export default function Form({ users }: { users: user[] }) {
             htmlFor="capacity"
             className="block text-sm font-medium text-gray-700"
           >
-            Capacity
+            Capacité
           </label>
           <input
             {...register("capacity", {
@@ -227,7 +227,7 @@ export default function Form({ users }: { users: user[] }) {
         >
           Cancel
         </Link>
-        <Button type="submit">Create Invoice</Button>
+        <Button type="submit">Ajouter le cours</Button>
       </div>
     </form>
   );

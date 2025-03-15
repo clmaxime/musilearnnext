@@ -18,44 +18,44 @@ export default async function Courses() {
         </a>
       </div>
 
-      <table className="w-full mt-5 rounded">
-        <thead>
-          <tr className="bg-gray-200 rounded">
-            <th className="p-2">Titre</th>
-            <th className="p-2">Description</th>
-            <th className="p-2">Instrument</th>
-            <th className="p-2">Horaires</th>
-            <th className="p-2">Capacité</th>
-            <th className="p-2">Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {courses.map((cours) => (
-            <tr key={cours.id} className="border-b rounded">
-              <td className="p-2">{cours.title}</td>
-              <td className="p-2">{cours.description}</td>
-              <td className="p-2">{cours.instrument}</td>
-              <td className="p-2">{cours.schedule}</td>
-              <td className="p-2">{cours.capacity}</td>
-              <td className="p-2 text-center flex">
-                <a
-                  href={`/dashboard/courses/${cours.id}/delete`}
-                  className="inline-flex items-center justify-center bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full mr-3"
-                >
-                  <TrashIcon className="h-5 w-5 text-white" />
-                </a>
+      <table className="w-full mt-5 rounded shadow-lg overflow-hidden">
+  <thead className="bg-gray-800 text-white">
+    <tr>
+      <th className="p-3">Titre</th>
+      <th className="p-3">Description</th>
+      <th className="p-3">Instrument</th>
+      <th className="p-3">Horaires</th>
+      <th className="p-3">Capacité</th>
+      <th className="p-3">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {courses.map((cours) => (
+      <tr key={cours.id} className="border-b hover:bg-gray-100">
+        <td className="p-3">{cours.title}</td>
+        <td className="p-3">{cours.description}</td>
+        <td className="p-3">{cours.instrument}</td>
+        <td className="p-3">{cours.schedule}</td>
+        <td className="p-3">{cours.capacity}</td>
+        <td className="p-3 text-center flex space-x-2">
+          <a
+            href={`/dashboard/courses/${cours.id}/delete`}
+            className="inline-flex items-center justify-center bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-3 rounded-full"
+          >
+            <TrashIcon className="h-5 w-5 text-white" />
+          </a>
+          <a
+            href={`/dashboard/courses/edite/${cours.id}`}
+            className="inline-flex items-center justify-center bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-3 rounded-full"
+          >
+            <PencilIcon className="h-5 w-5 text-white" />
+          </a>
+        </td>
+      </tr>
+    ))}
+  </tbody>
+</table>
 
-                <a
-                  href={`/dashboard/courses/edite/${cours.id}`}
-                  className="inline-flex items-center justify-center bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded-full"
-                >
-                  <PencilIcon className="h-5 w-5 text-white" />
-                </a>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
     </main>
   );
 }
