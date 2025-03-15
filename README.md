@@ -49,7 +49,7 @@ PGHOST_UNPOOLED=ep-steep-scene-a2cpmzq9.eu-central-1.aws.neon.tech
 PGUSER=neondb_owner
 PGDATABASE=neondb
 PGPASSWORD=npg_VdG2KSBvWo9r
-
+NEXTAUTH_SECRET=d5fedc6e94b932968872ff3c9f22dd27
 # Parameters for Vercel Postgres Templates
 POSTGRES_URL=postgres://neondb_owner:npg_VdG2KSBvWo9r@ep-steep-scene-a2cpmzq9-pooler.eu-central-1.aws.neon.tech/neondb?sslmode=require
 POSTGRES_URL_NON_POOLING=postgres://neondb_owner:npg_VdG2KSBvWo9r@ep-steep-scene-a2cpmzq9.eu-central-1.aws.neon.tech/neondb?sslmode=require
